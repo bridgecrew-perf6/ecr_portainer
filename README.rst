@@ -19,8 +19,8 @@ Usage
 Caveats
 ----
 
-* For some reason, the enviroment: tag is set on the stack file, however, it is not set during deploy. It has to be manually set for now.
-* In case you want to test out, enter portainer console under Containers > portainer container:
+* For some reason, the enviroment: tag is set on the stack file, however, the enviroment variables are not set inside the portainer container. It has to be manually set for now.
+* In case you want to test it out, attach a new console to the container. In Portainer go to Containers > Click the 'portainer' container > Attach:
 
 .. code-block:: bash
 
