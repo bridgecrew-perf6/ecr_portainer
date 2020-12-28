@@ -18,10 +18,8 @@ services:
   portainer:
     image: portainer-custom:latest
     command: -H tcp://tasks.agent:9001 --tlsskipverify
-    environment:
-      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
-      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
-      AWS_REGION: ${AWS_REGION}
+    env_file:
+      - .env
     ports:
       - "9000:9000"
       - "8000:8000"
